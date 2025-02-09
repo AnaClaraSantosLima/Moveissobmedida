@@ -1,0 +1,815 @@
+/*Topo da página*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root{
+    --cinza:#969695;
+    --cinzaclaro:#C8C8C8;
+    --cinzaescuro:#545C64;
+    --laranja:#FF8400;
+    --laranjaclaro:#DD9634;
+    --laranjaescuro:#D36622;
+    --fonte:'Roboto', arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--fonte);
+    margin:0 auto;
+ 
+}
+nav {
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+}
+
+header{
+    background-color: dimgrey;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    grid-template-columns: 5fr 1fr;
+}
+header menu{
+    background-color: dimgrey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+header menu li{
+    background-color: dimgrey;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px dashed #818080;
+}
+header menu a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+header nav{
+    height: 0;
+    overflow: hidden;
+    transition: all 2s ease;
+    grid-column: 1/3;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: dimgrey;
+    z-index: 1000;
+}
+#menu-check:checked + nav{
+    height: 250px;
+}
+#menu-check{
+    display: none;
+}
+.bnt-menu{
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+header.topo {
+    background-color: #C8C8C8;
+    display: flex;
+    padding: 10px;
+    height: 150px;
+    align-items: center; 
+    justify-content: end;
+    text-align: center;
+}
+
+.imgcima{
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+    justify-content: end;
+    align-items: center;
+    background-color: #C8C8C8;
+}
+.imgbaixo{
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+.imgbaixo img {
+    width: 35px;
+    height: auto;
+}
+.imgbaixo .face{
+    width:25px;
+}
+
+.imgcima img {
+    position:relative;
+    right: 10px;
+    width: 30px;
+    height: auto;
+}
+.logo {
+    left: 10px; 
+    position: absolute;
+}
+
+
+.titulo {
+    font-size: 25px;
+    color: black;
+}
+
+.inicio{
+    background-image: url(../imagens/home.png);
+    background-repeat: no-repeat;
+    height: 400px;
+    width:100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
+
+.navegacao{
+    width: 100%;
+}
+.navegacao menu{
+    display:flex;
+    list-style: none;
+    justify-content:space-around;
+    padding:15px;
+}
+.navegacaosuperior a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    width: 40px;
+    height:20px;
+}
+
+
+/*Catálogo de produtos*/
+.catalogo{
+    background-image: url(../imagens/fundo.png);
+    display: grid;
+    padding: 40px;
+    grid-template-areas:  
+        "closet armario mesa cama"
+        "closet sofa escrivaninha pia";
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.secao-produtos .titulo2 {
+    background-color: #a0a0a0;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    color: black;
+    border-top: 3px solid black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.item img{
+    border:1px solid black;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+}
+.item {
+    height: auto;
+    width: auto;
+    padding: 2px;
+    text-align: center;
+}
+.item a{
+    text-decoration: none;
+    color: black;
+}
+.item-1{
+    grid-area:closet;
+}
+.item-2{
+    grid-area: armario;
+}
+.item-3{
+    grid-area: mesa;
+}
+.item-4{
+    grid-area: cama;
+}
+.item-5{
+    grid-area: sofa;
+}
+.item-6{
+    grid-area: escrivaninha;
+}
+.item-7{
+    grid-area: pia;
+}
+
+
+.bnt-cinza1{
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 10px;
+    background-color: var(--cinzaclaro);
+    color:black;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    text-decoration: none;
+    box-shadow: 2px 2px 4px #545C64;
+}
+
+
+.bnt-cinza1:hover {
+    background-color: #a0a0a0;
+    transform: scale(1.1);
+}
+
+
+
+
+/*História*/
+.historia{
+    background-image: url(../imagens/fundo2.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-top: 3px solid black;
+}
+
+
+.historia h3 {
+    text-align: initial;
+    margin-bottom: 20px
+}
+
+
+.conteudo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.conteudo{
+    font-size: 20px;
+    padding: 20px;
+    font-weight:400;
+}
+
+.sofas{
+    border-radius: 10px;
+    width: 350px;
+    height: 250px;
+     box-shadow: 3px 2px 5px 2px black;
+}
+
+.lugar{
+    width: 80px;
+    height: 80px;
+}
+
+
+.bnt {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.bnt-cinza {
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--cinzaescuro);
+    color: white;
+    border-radius: 20px;
+    width: 60px;
+    text-decoration: none;
+    box-shadow: 2px 1px 5px #969695;
+}
+
+
+.bnt-cinza:hover{
+    background-color: var(--cinza);
+}
+
+
+
+/*Avaliações*/
+.clientes{
+    background-image: url(../imagens/fundo3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 3px solid black;
+}
+.cliente{
+    background-color: var(--cinzaclaro);
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #545C64;
+    text-align: center;
+}
+.clientes h1{
+    background-color: var(--cinzaclaro);
+    width: 260px;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 25px;
+    color: black;
+    margin-top: 15px;
+    box-shadow: 2px 2px 4px #545C64;
+}
+
+.cliente h4{
+    text-align: center;
+    color: black;
+}
+
+
+.foto1, .foto2, .foto3{
+    border-radius: 50%;
+    border: 1px solid var(--cinzaclaro);
+}
+
+
+.estrelas {
+    display: block;
+    font-size: 20px;
+    margin:0 auto;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.estrelas img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.bnt-laranja{
+    padding: 10px;
+    font-size: 15px;
+    width: 180px;
+    display: inline-block;
+    color:white;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--laranjaclaro);
+    box-shadow: 3px 2px 6px #969695;
+}
+
+
+.bnt-laranja:hover {
+    background-color: var(--laranjaescuro);
+}
+
+
+
+/*Área final*/
+.final{
+    background-color: black;
+    display:grid;
+    grid-template-areas: 'localizacao orcamento'
+                         'localizacao contato';
+    height: auto;
+    font-size: 23px;
+    color:var(--laranja);
+    border-top: 3px solid white;
+    padding: 10px;
+    gap: 20px;
+ 
+}
+
+
+
+/*Área para contato*/
+.contato{  
+    grid-area: contato;
+    border-top: 1px solid white;
+    font-size: 20px;
+    width: 500px;
+    padding: 20px;
+    margin: 10px auto
+}
+
+
+.telefone {
+    height: 30px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.numero {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.contato li{
+    background-color: #C8C8C8;
+    display: flex;
+    border-radius: 100%;
+    padding: 5px;
+}
+.contato ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 15px;
+}
+.contato ul li {
+    display: inline-block;
+}
+.contato ul li a img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.contato h3{
+    text-align: center;
+    margin-top: 11px;
+    margin-bottom: 20px;
+}
+
+
+
+/*Localização*/
+.localizacao{
+    grid-area: localizacao;
+    border-right: 1px solid white;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+}
+
+
+.mapa{
+    background-image: url(../imagens/mapa.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 200px;
+    margin: 0 auto;
+}
+
+
+.endereco{
+    font-size: 20px;
+    color: white;
+}
+
+
+/*Orçamento*/
+.orcamento{
+    grid-area: orcamento;
+    font-size: 17px;
+    padding: 20px;
+}
+.orcamento h2{
+    margin-top: 20px;
+}
+
+/*Rodapé*/
+.rodape{
+    background-color: black;
+    border-top: 1px solid white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+@media(min-width: 1023px){
+    header{
+        grid-template-columns: 1fr 1fr;
+        height: 100px;
+        height: 60px;
+    }
+    .bnt-menu{
+        display: none;
+    }
+    header nav{
+        height: auto;
+        grid-column: 2/3;
+    }
+    header menu{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+    }
+    header menu li{
+        border-bottom: none;
+    }
+    .cliente{
+        width: 990px;
+    }
+}
+
+
+
+@media(max-width: 767px){
+header{
+    height: 50px;
+}
+
+.imgcima img{
+    width: 25px;
+}
+header.topo {
+    height: 120px;
+}
+.imgbaixo{
+    gap: 20px;
+}
+.imgbaixo img{
+    width: 28px;
+}
+.imgbaixo .face{
+    width: 22px;
+}
+.titulo{
+    font-size: 23px;
+    font-weight: 500;
+}
+.secao-produtos .titulo2{
+    font-size: 18px;
+}
+.catalogo{
+    background-size: cover;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:  
+        "armario mesa"
+        "pia escrivaninha"
+        "cama sofa"
+        "closet closet";
+}
+.item img{
+    width: 280px;
+}
+.cliente{
+    width: 690px;
+}
+.clientes h1 {
+    width: 220px;
+    font-size: 20px;
+}
+.foto1, .foto2, .foto3 {
+    height: 60px;
+}
+.estrelas{
+    height: 50px;
+}
+.h2{
+    font-size: 20px;
+}
+.historia h3 {
+    font-size: 27px;
+}
+.historia p{
+    font-size: 18px;
+}
+.numero{
+    font-size: 15px;
+}
+.telefone{
+    width: 25px;
+}
+.endereco{
+    font-size: 14px;
+}
+.orcamento h2{
+    font-size: 20px;
+}
+.contato h3{
+    font-size: 22px;
+}
+.localizacao h3{
+    font-size: 22px;
+}
+.bnt-cinza, .bnt-cinza1, .bnt-laranja{
+    font-size: 14px;
+}
+
+}
+
+
+
+
+
+
+
+
+@media(max-width: 424px){
+    header{
+        height: 40px;
+    }
+    header menu a{
+        font-size: 15px;
+    }
+    #menu-check:checked + nav{
+        height: 218px;
+    }
+    .bnt-menu{
+        font-size: 20px;
+    }
+    .item h4{
+        color:#d4d3d3
+    }
+    .inicio{
+        height: 200px;
+        background-size: 640px;
+    }
+    .secao-produtos .titulo2 {
+        font-size: 18px;
+    }
+    .logo{
+        width: 130px;
+        top: 55px; 
+        left: 0;
+    }
+    header.topo {
+        height: 80px;
+    }
+    .titulo {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px;
+    }
+    .imgbaixo{
+        display: block;
+        border-top: 1px solid black;
+        padding: 4px;
+    }
+    .imgcima{
+        gap: 10px;
+    }
+    .imgcima img{
+        width: 20px;
+        margin-top: 5px;
+    }
+    .imgbaixo img{
+        width: 25px;
+    }
+    .imgbaixo .face{
+        margin-bottom: 5px;
+    }
+    
+    .catalogo{
+        background-size: cover;
+        grid-template-areas:  
+            "closet"  
+            "armario"
+            "sofa"  
+            "mesa"
+            "cama"
+            "escrivaninha"
+            "pia";
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        font-size: 14px;
+    }
+    .secao-produtos .titulo2{
+        font-size: 15px;
+        padding: 2px;
+    }
+    .item img{
+        width: 200px;
+    }
+    .foto1, .foto2, .foto3 {
+        height: 60px;
+    }
+    .estrelas{
+        height: 40px;
+    }
+    .clientes h1 {
+        width: 210px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .cliente{
+        width: 380px;
+    }
+    .clientes p{
+        font-size: 15px;
+    }
+    .historia{
+        background-size: cover;
+    }
+    .historia h3{
+        font-size: 25px;
+    }
+    .historia p{
+        font-size: 15px; 
+    }
+    .sofas{
+        width: 250px;
+        height: 150px;
+    }
+    .bnt-cinza, .bnt-cinza1, .bnt-laranja{
+        font-size: 10px;
+    }
+    .bnt-laranja{
+        width: 120px;
+    }
+    .lugar{
+        width: 60px;
+        height: 60px;
+    }
+    .conteudo-container{
+        display: block;
+    }
+    .contato h3{
+        text-align: start;
+    }
+
+    .final{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "orcamento"
+                             "contato"
+                             "localizacao";
+    }
+    .orcamento{
+        font-size: 15px;
+        border-bottom: 1px solid white;
+    }
+    .orcamento h2{
+        font-size: 20px;
+    }
+    .contato{
+        font-size: 15px;
+        border-top: none;
+        width: auto;
+    }
+    .telefone{
+        height: 23px;
+        align-items: start; 
+    }
+    .numero{
+        font-size: 14px;
+    }
+    .contato li{
+        padding: 3px;
+    }
+    .contato ul li a img{
+        width: 27px;
+        height: 27px;
+    }
+    .localizacao{
+        text-align: justify;
+        font-size: 18px;
+        border-right: none;
+        border-top: 1px solid white;
+    }
+    .mapa{
+        height: 120px;
+        width: 50%;
+    }
+    .endereco{
+        font-size: 12px;
+    }
+    footer{
+        font-size: 13px;
+    }
+    }
+   
+
+
+
