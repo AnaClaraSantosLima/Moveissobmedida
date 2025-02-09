@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../imagens/fundo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header.conteudo {
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
+
+.txt {
+    font-size: 18px;
+}
+
+.bnt1 {
+    background-color: #595959;
+    padding: 15px 20px;
+    border-radius: 20px;
+    width: 130px;
+    box-shadow: 2px 1px 5px #cccccb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.bnt1 a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px #595959;
+}
+
+.bnt1:hover {
+    background-color: #C8C8C8;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .bnt1 {
+        width: 100px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 15px;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    .bnt1 {
+        width: 90px;
+        padding: 6px 10px;
+    }
+}
